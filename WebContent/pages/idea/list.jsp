@@ -40,8 +40,7 @@
 									height="100" width="auto">
 							</c:if>
 							<c:if test="${idea.image != null}">
-								<img src="${idea.image}" alt="${idea.title}" height="100"
-									width="auto">
+								<img src="${idea.image}" alt="${idea.title}" height="100" width="auto">
 							</c:if>
 						</div>
 					</c:forEach>

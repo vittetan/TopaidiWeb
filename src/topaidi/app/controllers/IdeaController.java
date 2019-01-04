@@ -68,7 +68,13 @@ public class IdeaController extends HttpServlet {
 			String description = request.getParameter("description");
 			String image = request.getParameter("img");
 			
-			Idea idea = new Idea(null,title,description,image,null);
+			Idea idea;
+			if (image.equals("")) {
+				idea = new Idea(null,title,description,null,null);
+				
+			} else {
+				idea = new Idea(null,title,description,image,null);
+			}
 			
 			ideaDao.insert(idea);
 			
